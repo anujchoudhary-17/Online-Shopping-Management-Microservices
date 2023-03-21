@@ -1,2 +1,7 @@
 application.properties
 *.properties
+
+
+shopping-application/.gitignore
+order-service/.gitignore
+inventory_service/.gitignore
