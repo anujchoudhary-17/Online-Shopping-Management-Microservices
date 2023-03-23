@@ -32,6 +32,8 @@ public class OrderService {
 
         order.setOrderLineItemsList(orderLineItemsList);
 
+        // Call Inventory service, we will place order if it is available in the Inventory
+
         orderRepository.save(order);
     }
 

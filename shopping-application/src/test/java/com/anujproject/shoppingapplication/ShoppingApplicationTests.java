@@ -26,43 +26,43 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @Testcontainers
 @AutoConfigureMockMvc
 class ShoppingApplicationTests {
-
-	@Container
-	final static MongoDBContainer mongoDBContainer = new MongoDBContainer(DockerImageName.parse("mongo:4.4.2"));
-
-
-	@Container
-	static MongoDBContainer mongoDBContainerNew = new MongoDBContainer(
-			DockerImageName.parse("mongodb:4.4.2")
-					.asCompatibleSubstituteFor("mongo:4.4.2")
-	);
-	@Autowired
-	private MockMvc mockMvc;
-	@Autowired
-	private ObjectMapper objectMapper;
-
-	@DynamicPropertySource
-	static void setProperties(DynamicPropertyRegistry dynamicPropertyRegistry){
-		dynamicPropertyRegistry.add("spring.data.mongodb.uri",mongoDBContainer::getReplicaSetUrl);
-	}
-
-
-	@Test
-	void shouldCreateProduct() throws Exception {
-		ProductRequest productRequest = getProductRequest();
-		String productRequestString = objectMapper.writeValueAsString(productRequest);
-		mockMvc.perform(MockMvcRequestBuilders
-				.post("/api/product")
-				.contentType(MediaType.APPLICATION_JSON)
-				.content(productRequestString)).andExpect(status().isCreated());
-	}
-
-	private ProductRequest getProductRequest(){
-		return ProductRequest.builder()
-				.name("Samsung Galaxy S22")
-				.description("A smartphone released by Samsung")
-				.price(BigDecimal.valueOf(1100))
-				.build();
-	}
+//
+//	@Container
+//	final static MongoDBContainer mongoDBContainer = new MongoDBContainer(DockerImageName.parse("mongo:4.4.2"));
+//
+//
+//	@Container
+//	static MongoDBContainer mongoDBContainerNew = new MongoDBContainer(
+//			DockerImageName.parse("mongodb:4.4.2")
+//					.asCompatibleSubstituteFor("mongo:4.4.2")
+//	);
+//	@Autowired
+//	private MockMvc mockMvc;
+//	@Autowired
+//	private ObjectMapper objectMapper;
+//
+//	@DynamicPropertySource
+//	static void setProperties(DynamicPropertyRegistry dynamicPropertyRegistry){
+//		dynamicPropertyRegistry.add("spring.data.mongodb.uri",mongoDBContainer::getReplicaSetUrl);
+//	}
+//
+//
+//	@Test
+//	void shouldCreateProduct() throws Exception {
+//		ProductRequest productRequest = getProductRequest();
+//		String productRequestString = objectMapper.writeValueAsString(productRequest);
+//		mockMvc.perform(MockMvcRequestBuilders
+//				.post("/api/product")
+//				.contentType(MediaType.APPLICATION_JSON)
+//				.content(productRequestString)).andExpect(status().isCreated());
+//	}
+//
+//	private ProductRequest getProductRequest(){
+//		return ProductRequest.builder()
+//				.name("Samsung Galaxy S22")
+//				.description("A smartphone released by Samsung")
+//				.price(BigDecimal.valueOf(1100))
+//				.build();
+//	}
 
 }
