@@ -10,7 +10,7 @@
     <modules>
         <module>shopping-application</module>
         <module>order-service</module>
-        <module>inventory_service</module>
+        <module>inventory-service</module>
         <module>discovery-server</module>
     </modules>
     <properties>

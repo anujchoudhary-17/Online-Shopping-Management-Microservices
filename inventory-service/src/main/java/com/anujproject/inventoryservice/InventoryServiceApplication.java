@@ -1,14 +1,17 @@
-package com.anujproject.inventory_service;
+package com.anujproject.inventoryservice;
 
-import com.anujproject.inventory_service.model.Inventory;
-import com.anujproject.inventory_service.repository.InventoryRepository;
+import com.anujproject.inventoryservice.model.Inventory;
+import com.anujproject.inventoryservice.repository.InventoryRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 
 
 @SpringBootApplication
+@EnableDiscoveryClient
 public class InventoryServiceApplication {
 
 	public static void main(String[] args) {

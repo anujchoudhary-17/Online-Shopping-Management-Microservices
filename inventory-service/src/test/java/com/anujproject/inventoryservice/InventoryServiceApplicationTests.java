@@ -1,4 +1,4 @@
-package com.anujproject.inventory_service;
+package com.anujproject.inventoryservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

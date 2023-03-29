@@ -1,8 +1,8 @@
-package com.anujproject.inventory_service.service;
+package com.anujproject.inventoryservice.service;
 
 
-import com.anujproject.inventory_service.dto.InventoryResponse;
-import com.anujproject.inventory_service.repository.InventoryRepository;
+import com.anujproject.inventoryservice.dto.InventoryResponse;
+import com.anujproject.inventoryservice.repository.InventoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,7 +1,10 @@
-package com.anujproject.inventory_service.dto;
+package com.anujproject.orderservice.dto;
 
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor

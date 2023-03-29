@@ -1,8 +1,8 @@
-package com.anujproject.inventory_service.controller;
+package com.anujproject.inventoryservice.controller;
 
 
-import com.anujproject.inventory_service.dto.InventoryResponse;
-import com.anujproject.inventory_service.service.InventoryService;
+import com.anujproject.inventoryservice.dto.InventoryResponse;
+import com.anujproject.inventoryservice.service.InventoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
