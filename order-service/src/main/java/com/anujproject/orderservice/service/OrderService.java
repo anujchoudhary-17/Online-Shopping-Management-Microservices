@@ -9,7 +9,6 @@ import com.anujproject.orderservice.model.Order;
 import com.anujproject.orderservice.model.OrderLineItems;
 import com.anujproject.orderservice.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -20,7 +19,6 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-@Slf4j
 @Transactional
 public class OrderService {
 
