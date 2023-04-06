@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
-@Table(name = "byxaeikprltf6gumatco.tbl_order_line_items")
+@Table(name = "tbl_order_line_items")
 @Getter
 @Setter
 @NoArgsConstructor

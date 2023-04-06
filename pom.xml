@@ -3,6 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
     <packaging>pom</packaging>
     <groupId>com.anujproject</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -13,6 +19,7 @@
         <module>inventory-service</module>
         <module>discovery-server</module>
         <module>api-gateway</module>
+        <module>notification-service</module>
     </modules>
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
@@ -20,6 +27,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-cloud.version>2022.0.1</spring-cloud.version>
     </properties>
+
 
     <dependencyManagement>
         <dependencies>
@@ -39,4 +47,30 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>3.2.1</version>
+                <configuration>
+                    <from>
+                        <image>eclipse-temurin:17.0.4.1_1-jre</image>
+                    </from>
+                    <to><image>registry.hub.docker.com/anuj17/${project.artifactId}</image></to>
+                </configuration>
+            </plugin>
+
+        </plugins>
+
+
+    </build>
+
 </project>
